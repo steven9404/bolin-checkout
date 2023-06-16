@@ -1,0 +1,34 @@
+2023-06-14 16:31:47.017 CST [1741] FATAL:  lock file "postmaster.pid" already exists
+2023-06-14 16:31:47.017 CST [1741] HINT:  Is another postmaster (PID 1696) running in data directory "/Users/steven/Projects/wordpress/bolinStage/next-app/shopify-nextjs-prisma-app/database"?
+2023-06-14 16:44:38.720 CST [2065] LOG:  starting PostgreSQL 14.8 (Homebrew) on x86_64-apple-darwin22.4.0, compiled by Apple clang version 14.0.3 (clang-1403.0.22.14.1), 64-bit
+2023-06-14 16:44:38.723 CST [2065] LOG:  listening on IPv6 address "::1", port 5432
+2023-06-14 16:44:38.723 CST [2065] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-06-14 16:44:38.724 CST [2065] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-06-14 16:44:38.727 CST [2066] LOG:  database system was shut down at 2023-06-14 16:43:43 CST
+2023-06-14 16:44:38.730 CST [2065] LOG:  database system is ready to accept connections
+2023-06-14 16:44:52.167 CST [2085] FATAL:  database "steven" does not exist
+2023-06-14 16:48:54.385 CST [2160] FATAL:  database "steven" does not exist
+2023-06-14 16:48:54.388 CST [2161] FATAL:  database "steven" does not exist
+2023-06-14 16:52:16.328 CST [2193] FATAL:  database "steven" does not exist
+2023-06-14 16:57:43.006 CST [2354] LOG:  starting PostgreSQL 14.8 (Homebrew) on x86_64-apple-darwin22.4.0, compiled by Apple clang version 14.0.3 (clang-1403.0.22.14.1), 64-bit
+2023-06-14 16:57:43.009 CST [2354] LOG:  could not bind IPv6 address "::1": Address already in use
+2023-06-14 16:57:43.009 CST [2354] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2023-06-14 16:57:43.009 CST [2354] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2023-06-14 16:57:43.009 CST [2354] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2023-06-14 16:57:43.009 CST [2354] WARNING:  could not create listen socket for "localhost"
+2023-06-14 16:57:43.009 CST [2354] FATAL:  could not create any TCP/IP sockets
+2023-06-14 16:57:43.010 CST [2354] LOG:  database system is shut down
+2023-06-14 16:58:10.993 CST [2065] LOG:  received smart shutdown request
+2023-06-14 16:58:10.994 CST [2065] LOG:  background worker "logical replication launcher" (PID 2072) exited with exit code 1
+2023-06-14 16:58:10.994 CST [2067] LOG:  shutting down
+2023-06-14 16:58:11.001 CST [2065] LOG:  database system is shut down
+2023-06-14 16:59:31.978 CST [2418] LOG:  starting PostgreSQL 14.8 (Homebrew) on x86_64-apple-darwin22.4.0, compiled by Apple clang version 14.0.3 (clang-1403.0.22.14.1), 64-bit
+2023-06-14 16:59:31.980 CST [2418] LOG:  listening on IPv6 address "::1", port 5432
+2023-06-14 16:59:31.980 CST [2418] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-06-14 16:59:31.981 CST [2418] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-06-14 16:59:31.984 CST [2419] LOG:  database system was shut down at 2023-06-14 16:58:10 CST
+2023-06-14 16:59:31.984 CST [2419] LOG:  invalid primary checkpoint record
+2023-06-14 16:59:31.984 CST [2419] PANIC:  could not locate a valid checkpoint record
+2023-06-14 16:59:32.046 CST [2418] LOG:  startup process (PID 2419) was terminated by signal 6: Abort trap: 6
+2023-06-14 16:59:32.046 CST [2418] LOG:  aborting startup due to startup process failure
+2023-06-14 16:59:32.048 CST [2418] LOG:  database system is shut down

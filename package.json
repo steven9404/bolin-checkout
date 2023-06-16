@@ -17,7 +17,7 @@
     "pretty": "prettier --write ./",
     "update": "ncu -u",
     "update:url": "node _developer/updateDashboard.js",
-    "ngrok:auth": "ngrok authtoken <auth-token-goes-here>",
+    "ngrok:auth": "ngrok authtoken 2QQJgtSF4vlqGEusYu2QbpzTbUe_4BmDNWBqbs2MqGvKGgJyg",
     "ngrok": "ngrok http 3000",
     "-----> Shopify <-----": "",
     "shopify": "shopify",
@@ -52,7 +52,7 @@
     "@shopify/cli": "^3.46.1",
     "@shopify/cli-kit": "^3.46.1",
     "dotenv": "^16.0.3",
-    "ngrok": "^4.3.3",
+    "ngrok": "^5.0.0-beta.2",
     "npm-check-updates": "^16.10.12",
     "prettier": "^2.8.8",
     "prisma": "^4.14.1"
