@@ -19,6 +19,22 @@ const HomePage = () => {
       <Layout>
         <Layout.Section fullWidth>
           <LegacyCard
+            title="Product List"
+            sectioned
+            primaryFooterAction={{
+              content: "Product List",
+              onAction: () => {
+                router.push("/products");
+              },
+            }}
+          >
+            <p>
+              Product List
+            </p>
+          </LegacyCard>
+        </Layout.Section>
+        <Layout.Section oneHalf>
+          <LegacyCard
             title="Debug Cards"
             sectioned
             primaryFooterAction={{
@@ -133,7 +149,7 @@ const HomePage = () => {
             <p>🌎 / 🇨🇦 and looking to expand your engineering team?</p>
           </LegacyCard>
         </Layout.Section>
-        <Layout.Section fullWidth>
+        <Layout.Section oneHalf>
           <LegacyCard
             sectioned
             title="Developer Notes"
