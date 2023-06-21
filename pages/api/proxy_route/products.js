@@ -7,7 +7,7 @@ const handler = async (req, res) => {
   const { client } = await clientProvider.offline.graphqlClient({
     shop: req.user_shop,
   });
-  res.status(200).send({ content: "Products Be Working" });
+  res.status(200).send(JSON.stringify(response));
 };
 
 export default withMiddleware("verifyProxy")(handler);
