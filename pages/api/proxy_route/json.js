@@ -4,7 +4,7 @@ import clientProvider from "@/utils/clientProvider";
 import withMiddleware from "@/utils/middleware/withMiddleware.js";
 
 const handler = async (req, res) => {
-  const { client } = await clientProvider.graphqlClient({
+  const { client } = await clientProvider.offline.graphqlClient({
     req,
     res,
     isOnline: true,
@@ -33,7 +33,7 @@ const handler = async (req, res) => {
   }`,
   });
 
-  res.status(200).send('working');
+  res.status(200).send(JSON.stringify(response));
 };
 
 export default withMiddleware("verifyProxy")(handler);
