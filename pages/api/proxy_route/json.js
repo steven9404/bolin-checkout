@@ -4,10 +4,36 @@ import clientProvider from "@/utils/clientProvider";
 import withMiddleware from "@/utils/middleware/withMiddleware.js";
 
 const handler = async (req, res) => {
-  const { client } = await clientProvider.offline.graphqlClient({
-    shop: req.user_shop,
+  const { client } = await clientProvider.graphqlClient({
+    req,
+    res,
+    isOnline: true,
   });
-  res.status(200).send({ content: "Proxy Be Working" });
+
+  const response = await client.query({
+  data: `{
+      shop {
+          products(first: 50) {
+              edges {
+                  node {
+                      id
+                      title
+                      images(first: 1) {
+                          edges {
+                              node {
+                                  src
+                                  altText
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }`,
+  });
+
+  res.status(200).send(response);
 };
 
 export default withMiddleware("verifyProxy")(handler);
