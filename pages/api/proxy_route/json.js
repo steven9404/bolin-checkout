@@ -33,7 +33,7 @@ const handler = async (req, res) => {
   }`,
   });
 
-  res.status(200).send(JSON.stringify(response));
+  res.status(200).send('working');
 };
 
 export default withMiddleware("verifyProxy")(handler);
