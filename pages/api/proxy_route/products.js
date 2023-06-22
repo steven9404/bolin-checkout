@@ -23,6 +23,7 @@ const handler = async (req, res) => {
             }
             metafields(
               first: 5
+              keys: ["custom.store_product_id", "custom.short_description", "custom.model_number"]
             ) {
               edges {
                 node {
