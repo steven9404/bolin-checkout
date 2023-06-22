@@ -21,21 +21,18 @@ const handler = async (req, res) => {
                 altText
               }
             }
-            metafield(key: "store_product_id") {
-              key
-              value
-            }
-            metafield(key: "model_number") {
-              key
-              value
-            }
-            metafield(key: "short_description") {
-              key
-              value
+            metafields(
+              first: 3
+              keys: ["product_list.store_product_id", "product_list.short_description", "product_list.model_number"]
+            ) {
+              nodes {
+                key
+                value
+              }
             }
           }
         }
-    }`,
+      }`,
   });
 
   res.status(200).send(JSON.stringify(response));
