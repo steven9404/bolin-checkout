@@ -22,12 +22,14 @@ const handler = async (req, res) => {
               }
             }
             metafields(
-              first: 3
-              keys: ["product_list.store_product_id", "product_list.short_description", "product_list.model_number"]
+              first: 5
             ) {
-              nodes {
-                key
-                value
+              edges {
+                node {
+                  key
+                  value
+                  namespace
+                }
               }
             }
           }
