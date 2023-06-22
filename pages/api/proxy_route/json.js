@@ -9,26 +9,28 @@ const handler = async (req, res) => {
   });
 
   const response = await client.query({
-  data: `{
-      shop {
-          products(first: 50) {
-              edges {
-                  node {
-                      id
-                      title
-                      images(first: 1) {
-                          edges {
-                              node {
-                                  src
-                                  altText
-                              }
-                          }
-                      }
-                  }
-              }
+    data: `{
+      products(first: 39) {
+        nodes {
+          id
+          title
+          tags
+          images(first: 10) {
+            nodes {
+              url
+              altText
+            }
           }
+          metafields(first: 10) {
+            nodes {
+              key
+              value
+              namespace
+            }
+          }
+        }
       }
-  }`,
+    }`,
   });
 
   res.status(200).send(JSON.stringify(response));

@@ -14,7 +14,6 @@ const productListing = () => {
   //MARK:- Replace this amazing fetch + state implementation with `swr` or `react-query`.
   async function fetchWebhooks() {
     const res = await fetch("/api/apps/products/getProducts");
-    console.log(res);
     const data = await res.json();
     let rowData = [];
     Object.entries(data.body.data.shop.products.edges).map(
