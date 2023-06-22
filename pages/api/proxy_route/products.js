@@ -32,8 +32,9 @@ const handler = async (req, res) => {
       }
     }`,
   });
-
-  res.status(200).send(JSON.stringify(response));
+  const data = await response.json();
+  
+  res.status(200).send(JSON.stringify(data.body.data.products));
 };
 
 export default withMiddleware("verifyProxy")(handler);
