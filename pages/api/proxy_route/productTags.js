@@ -10,28 +10,14 @@ const handler = async (req, res) => {
 
   const response = await client.query({
     data: `{
-        products(first: 39) {
-          nodes {
-            id
-            title
-            tags
-            images(first: 10) {
-              nodes {
-                url
-                altText
-              }
+        shop {
+          productTags(first: 250) {
+            pageInfo {
+              hasNextPage
             }
-            metafield(key: "store_product_id") {
-              key
-              value
-            }
-            metafield(key: "model_number") {
-              key
-              value
-            }
-            metafield(key: "short_description") {
-              key
-              value
+            edges {
+              node
+              cursor
             }
           }
         }
